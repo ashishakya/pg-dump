@@ -1,3 +1,6 @@
+# Requirement:
+ - `pg_dump`, a PostgreSQL utility tool. PostgreSQL generally comes with this utility tool to backup database information to a file.
+
 # Steps:
 
 - Clone the repository.
