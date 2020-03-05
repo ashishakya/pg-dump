@@ -11,15 +11,15 @@
 - Copy the template file in the name of your project using  `cp pgdump-template.sh project1.sh`.
 - Open the copied file using `sudo nano project1.sh`.
 - Fill the following fields and save the content.
-    Field | Description
-    ---| ---
-    projectName| Enter the name of the project (Eg: demo)
-    env| Enter the project environment (Eg: production. staging)
-    host| Set the IP of your database (Eg: 35.69.65.98)
-    dbName| The name of the database
-    userName| The username of the database
-    portNo| The port no of the database (5432 is the default port for postgres)
-    bdPath| Path for datbase backup
+    |Field | Description|
+    |---| ---|
+    |projectName| Enter the name of the project (Eg: demo)|
+    |env| Enter the project environment (Eg: production. staging)|
+    |host| Set the IP of your database (Eg: 35.69.65.98)|
+    |dbName| The name of the database|
+    |userName| The username of the database|
+    |portNo| The port no of the database (5432 is the default port for postgres)|
+    |bdPath| Path for datbase backup|
 - Allow execution right to the `project1.sh` file using `sudo chmod +x project1.sh` 
 - Move to project's root directory using `cd ..`.
 - Update the path of recently modified file in `pgdump-factory.sh`
