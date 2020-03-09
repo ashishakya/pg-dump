@@ -1,37 +1,42 @@
 #! /bin/bash 
 
-echo "Please select a database?"
+#this appends the script file name
 
-options=(
-	"PROJECT 1" 
-	"PROJECT 2" 
-	"PROJECT 3"
-	"QUIT")
+paths=()
+scriptFileNames=()
 
-select opt in "${options[@]}"
+#for entry in "/home/ashishakya/dotfiles/pgdump"/*
+for entry in "./pgdump-scripts"/*
 
 do
-	case $opt in
-		"PROJECT 1")
-			# ./pgdump-scripts/{Enter the name of script for your project 1}
-			echo 'you selected project 1'
+  paths+=("$entry")
+
+  pathChunks=()
+  IFS='/' # space is set as delimiter
+  read -ra ADDR <<< "$entry" # str is read into an array as tokens separated by IFS
+  for pathChunk in "${ADDR[@]}"; do # access each element of array
+	    # echo "$i"
+      pathChunks+=("$pathChunk")
+  done
+  directoriesCount=${#pathChunks[@]} 
+  lastIndex="$(($directoriesCount-1))"
+  scriptFileName=${pathChunks[$lastIndex]}
+  scriptFileNames+=(${scriptFileName%???}) # remove .sh from scrit file name and append in array
+
+done
+
+echo -e "Please select a database?\n"
+
+select opt in "${scriptFileNames[@]}"
+
+do
+	for i in ${scriptFileNames[@]}
+	do
+	   if [ $opt = $i ]
+		then
+			"./pgdump-scripts/$opt.sh"
 			break
-			;;
-		"PROJECT 2")
-			# ./pgdump-scripts/{Enter the name of script for your project 2}
-			echo 'you selected project 2'
-			break
-			;;
-		"PROJECT 3")
-			# ./pgdump-scripts/{Enter the name of script for your project 2}
-			echo 'you selected project 3'
-			break
-			;;
-	    "QUIT")
-        	break
-        	;;
-		*)
-			echo "Invalid Option $REPLY"	
-	esac
+	   fi
+	done
 done
 
