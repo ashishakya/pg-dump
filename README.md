@@ -6,7 +6,7 @@
 
 - Clone the repository.
 - Open the project's root directory.
-- Make a directory with a name `pgdump-sripts`.
+- Make a directory with a name `pgdump-scripts`.
 - Copy the `pgdump-template.sh` script file into `pgdump-sripts` directory in the name of your project. Eg: `cp pgdump-template.sh ./pgdump-scripts/project1.sh`.
 - Edit the copied file using text editor.
 - Fill the following fields and save the content.
