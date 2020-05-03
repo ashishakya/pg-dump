@@ -26,3 +26,5 @@
 - Allow execution right to the `project1.sh` file using `sudo chmod +x project1.sh` 
 - Move to project's root directory using `cd ..`.
 - Finally execute `pgdump-factory.sh` using `./pgdump-factory.sh` command. Select the desired option to take the backup from remote postgres server. `(Here the options are shown based in the script file name you just created.)`
+
+Simply create multiple copies of `pgdump-template.sh` script file into `pgdump-sripts` directory with respective credentails for multiple projects' database backup.
