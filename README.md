@@ -1,3 +1,5 @@
+# User interactive script file for taking backup from postgres database server.
+
 # Requirement:
  - `pg_dump`, a PostgreSQL utility tool. PostgreSQL generally comes with this utility tool to backup database information to a file. 
  - Make sure that the version of `pg_dump` tool is same as that of server-.
