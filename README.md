@@ -9,7 +9,7 @@
 - Clone the repository.
 - Open the project's root directory.
 - Make a directory with a name `pgdump-scripts`.
-- Copy the `pgdump-template.sh` script file into `pgdump-sripts` directory in the name of your project. Eg: `cp pgdump-template.sh ./pgdump-scripts/project1.sh`.
+- Copy the `pgdump-template.sh` script file into `pgdump-sripts` directory in the name of your project. Eg: `cp pgdump-template.sh ./pgdump-scripts/project1.sh`. (Please provide a better file name instead of random name. Project's name can be provided for better readibility.)
 - Edit the copied file using text editor.
 - Fill the following fields and save the content.
 
@@ -21,8 +21,8 @@
 |dbName| The name of the database|
 |userName| The username of the database|
 |portNo| The port no of the database (5432 is the default port for postgres)|
-|bdPath| Path for datbase backup|
+|bdPath| Path for database backup (This is the path, where backup will be stored in your PC)|
 
 - Allow execution right to the `project1.sh` file using `sudo chmod +x project1.sh` 
 - Move to project's root directory using `cd ..`.
-- Finally execute `pgdump-factory.sh` using `./pgdump-factory.sh` command. Select the desired option to take the backup from remote postgres server.
+- Finally execute `pgdump-factory.sh` using `./pgdump-factory.sh` command. Select the desired option to take the backup from remote postgres server. `(Here the options are shown based in the script file name you just created.)`
